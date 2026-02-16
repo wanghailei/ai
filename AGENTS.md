@@ -3,7 +3,6 @@
 ## Purpose
 - This file is the sole instruction entrypoint loaded through `~/.codex/AGENTS.md`.
 - Canonical source lives in `~/AI/AGENTS.md`.
-- Default behaviour: apply `~/AI/INTEGRATION_WORKFLOW.md` in every repository you work on, unless a repository defines stricter local rules.
 - Global instructions shared across projects must be maintained in `~/AI`; project repositories should keep only local profile details.
 
 ## Working Principles and Agreements
@@ -16,7 +15,7 @@
 
 ## Instruction Set
 - Apply `~/AI/CODING.md` for naming and coding style.
-- Apply `~/AI/INTEGRATION_WORKFLOW.md` for branch, PR, review, and delivery workflow.
+- Apply `~/AI/INTEGRATION_WORKFLOW.md` for branch, PR, review, and delivery workflow by default in every repository you work on, unless that repository defines stricter local rules.
 - Apply `~/AI/DOCUMENTATION.md` for documentation structure and quality.
 
 ## Precedence
