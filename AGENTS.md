@@ -2,7 +2,7 @@
 
 ## Purpose
 - This file is the sole instruction entrypoint loaded through `~/.codex/AGENTS.md`.
-- Canonical source lives in `/Users/Hailei/AI/AGENTS.md`.
+- Canonical source lives in `~/AI/AGENTS.md`.
 
 ## Working Principles and Agreements
 - Apply first-principles reasoning and challenge inherited practice unless it clearly earns its place.
@@ -13,9 +13,9 @@
 - At the start of each thread, declare one scope and map it to one branch.
 
 ## Instruction Set
-- Apply `/Users/Hailei/AI/CODING.md` for naming and coding style.
-- Apply `/Users/Hailei/AI/WORKFLOW.md` for branch, PR, review, and delivery workflow.
-- Apply `/Users/Hailei/AI/DOCUMENTATION.md` for documentation structure and quality.
+- Apply `~/AI/CODING.md` for naming and coding style.
+- Apply `~/AI/WORKFLOW.md` for branch, PR, review, and delivery workflow.
+- Apply `~/AI/DOCUMENTATION.md` for documentation structure and quality.
 
 ## Precedence
 - Apply the instruction set in the listed order.
