@@ -1,4 +1,8 @@
-# WORKFLOW.md
+# INTEGRATION_WORKFLOW.md
+
+## Ownership
+- This file defines shared workflow policy across projects that load `~/AI/AGENTS.md`.
+- Repository docs should keep only repository-specific profile details and reference this file for shared workflow rules.
 
 ## Branch and Scope
 - Every feature or module thread must declare one scope and one branch.
@@ -20,7 +24,28 @@
 ## Review Workflow
 - Before merge recommendation, read the current local or CI review report artifacts required by the repository workflow.
 - By default for any active PR, read unresolved review threads (including Copilot, ChatGPT or Codex, Claude, and Gemini), summarise required refinements, implement agreed fixes, and reply on resolved threads with a `Codex:` prefix before merge recommendation.
+- After required checks turn green, run a just-before-merge unresolved-thread sweep, wait a short settle window (for example 60 seconds), then run a second unresolved-thread sweep to catch late AI bot comments.
+- Merge only when both sweeps report zero unresolved review threads and no blocking findings remain.
+- Do not treat green checks or `mergeStateStatus: CLEAN` as sufficient if unresolved review threads remain.
 - If review state is attention (for example unresolved review comments, failing checks, or pending required checks), stop and discuss with the user before merge recommendation.
+- In documentation and workflow examples, prefer `~/...` style for home-relative paths instead of machine-specific `/Users/...` paths.
+
+## AI Review Panel
+- Copilot is best for repository-native automated review and quick static feedback.
+- ChatGPT/Codex is best for implementation reasoning, defect surfacing, and patch proposals.
+- Claude is best for adversarial edge-case and safety-oriented critique.
+- Gemini is best for alternative domain reasoning and consistency checks.
+- Use model disagreement as a signal to tighten requirements and test coverage.
+
+## Finding Disposition Discipline
+- Every non-trivial AI finding must be tracked as one of: `accepted`, `rejected`, or `deferred`.
+- `accepted`: implemented in the current PR.
+- `rejected`: not adopted, with explicit rationale.
+- `deferred`: intentionally postponed, with follow-up plan.
+
+## Governance Boundary
+- AI reviews are mandatory process input for quality and risk reduction.
+- Merge authority remains with GitHub rulesets/checks and explicit human judgement.
 
 ## Delivery Integrity Protocol (Locked)
 - Use a plan-then-apply gate: restate scope and exact files to change, then wait for explicit `Proceed` before editing.
