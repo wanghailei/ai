@@ -3,6 +3,7 @@
 ## Purpose
 - This file is the sole instruction entrypoint loaded through `~/.codex/AGENTS.md`.
 - Canonical source lives in `~/AI/AGENTS.md`.
+- Global instructions shared across projects must be maintained in `~/AI`; project repositories should keep only local profile details.
 
 ## Working Principles and Agreements
 - Apply first-principles reasoning and challenge inherited practice unless it clearly earns its place.
@@ -14,7 +15,7 @@
 
 ## Instruction Set
 - Apply `~/AI/CODING.md` for naming and coding style.
-- Apply `~/AI/WORKFLOW.md` for branch, PR, review, and delivery workflow.
+- Apply `~/AI/INTEGRATION_WORKFLOW.md` for branch, PR, review, and delivery workflow.
 - Apply `~/AI/DOCUMENTATION.md` for documentation structure and quality.
 
 ## Precedence
