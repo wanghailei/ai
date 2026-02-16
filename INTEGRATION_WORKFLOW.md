@@ -2,7 +2,7 @@
 
 ## Ownership
 - This file defines shared workflow policy across projects that load `~/AI/AGENTS.md`.
-- Default behaviour: use this workflow in every repository you work on, unless that repository defines stricter local rules.
+- This is the default workflow, which can be overridden by repository-specific rules.
 - Repository docs should keep only repository-specific profile details and reference this file for shared workflow rules.
 
 ## Branch and Scope
@@ -25,8 +25,8 @@
 ## Review Workflow
 - Before merge recommendation, read the current local or CI review report artifacts required by the repository workflow.
 - By default for any active PR, read unresolved review threads (including Copilot, ChatGPT or Codex, Claude, and Gemini), summarise required refinements, implement agreed fixes, and reply on resolved threads with a `Codex:` prefix before merge recommendation.
-- After required checks turn green, run a just-before-merge unresolved-thread sweep, wait a short settle window (for example 60 seconds), then run a second unresolved-thread sweep to catch late AI bot comments.
-- Merge only when both sweeps report zero unresolved review threads and no blocking findings remain.
+- After required checks turn green, run unresolved-thread sweeps using a convergence rule: capture unresolved-thread count plus latest thread activity marker, then poll again and continue until two consecutive snapshots are identical.
+- Merge only when the converged snapshot reports zero unresolved review threads and no blocking findings remain.
 - Do not treat green checks or `mergeStateStatus: CLEAN` as sufficient if unresolved review threads remain.
 - If review state is attention (for example unresolved review comments, failing checks, or pending required checks), stop and discuss with the user before merge recommendation.
 - In documentation and workflow examples, prefer `~/...` style for home-relative paths instead of machine-specific `/Users/...` paths.
