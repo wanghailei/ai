@@ -9,7 +9,7 @@
 - Apply first-principles reasoning and challenge inherited practice unless it clearly earns its place.
 - Avoid aggressive coding approaches for enterprise systems; prioritise security and stability over speed or cleverness.
 - Use British English spelling and usage in all communication and generated text.
-- Ask for confirmation before editing more than 10 files in a single turn.
+- Ask for confirmation before editing more than 24 files in a single turn.
 - Never modify vendor libraries or minified files.
 - At the start of each thread, declare one scope and map it to one branch.
 
