@@ -20,7 +20,7 @@
 - After each merge, switch to `main` and fast-forward from `github/main`.
 - Houseclean branches frequently: delete merged local or remote branches and keep stash near zero.
 - Never delete local main or master or remote main or master refs (`main`, `master`, `github/main`, `github/master`, `origin/main`, `origin/master`) under any circumstances.
-- If a repository provides `bin/gatekeeper`, use it regularly for audit and housekeeping cadence.
+- If a repository provides `bin/butler`, use it regularly for audit and housekeeping cadence.
 
 ## Review Workflow
 - Before merge recommendation, read the current local or CI review report artifacts required by the repository workflow.
