@@ -2,6 +2,7 @@
 
 ## Ownership
 - This file defines shared workflow policy across projects that load `~/AI/AGENTS.md`.
+- Default behaviour: use this workflow in every repository you work on, unless that repository defines stricter local rules.
 - Repository docs should keep only repository-specific profile details and reference this file for shared workflow rules.
 
 ## Branch and Scope
