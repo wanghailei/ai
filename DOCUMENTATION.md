@@ -69,16 +69,17 @@ When documentation is updated after design discussion:
 - Assume zero prior project context, zero maintainer context, and zero repository-internal knowledge.
 - Define prerequisites, required tools, inputs, outputs, and expected results explicitly.
 - Do not require local source checkout for installation or setup unless the document is explicitly contributor-focused.
-- Use generic local path placeholders in examples: `/local/path/of/repo`, `/local/path/of/tool`.
+- For end-user guides, use generic local path placeholders in examples: `/local/path/of/repo`, `/local/path/of/tool`.
 - Use generic remote placeholders in examples: `<owner>/<repo>`.
 - Never use machine-specific local paths in user-facing docs (`/Users/...`, `/home/...`, `C:\Users\...`).
+- For contributor-focused workflow or maintainer documentation, use `~/...` home-relative paths as defined in `INTEGRATION_WORKFLOW.md`.
 - ==If a user guide can only be followed by the author, it is invalid and must be rewritten for a first-time user.==
 
 ## Path Naming Log
 
 - Date: 2026-02-17
 - Change: standardised user-facing path placeholders
-- Previous local path naming observed: `/Users/Hailei/...`, `~/Studio/...`, `~/path/of/...`
+- Previous local path naming observed: `/Users/<username>/...`, `~/Studio/...`, `~/path/of/...`
 - Previous remote naming observed: `<owner>/chronicle`
 - Current local path standard: `/local/path/of/repo`, `/local/path/of/tool`
 - Current remote path standard: `<owner>/<repo>`

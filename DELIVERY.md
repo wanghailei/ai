@@ -6,8 +6,8 @@
 
 ## Test
 - Separate validation evidence by mode:
-	- common-user dogfooding,
-	- local pre-release simulation.
+  - common-user dogfooding,
+  - local pre-release simulation.
 - Do not mix these modes in one claim.
 - Every release validation note must label the mode explicitly.
 - Common-user dogfooding requires the same install path a normal user uses (published package source and normal install command).
@@ -21,5 +21,5 @@
 
 ## Release
 - Do not claim release readiness from simulation evidence alone.
-- Release readiness requires at least one successful common-user dogfood run using published package distribution.
+- Release readiness requires at least one successful common-user dogfooding using published package distribution.
 - If package publication is pending, release status must be reported as pre-release validation only.
