@@ -34,7 +34,7 @@
 - Merge only when the converged snapshot reports zero unresolved review threads and no blocking findings remain.
 - Do not treat green checks or `mergeStateStatus: CLEAN` as sufficient if unresolved review threads remain.
 - If review state is attention (for example unresolved review comments, failing checks, or pending required checks), stop and discuss with the user before merge recommendation.
-- In documentation and workflow examples, prefer `~/...` style for home-relative paths instead of machine-specific `/Users/...` paths.
+- In contributor-facing documentation and workflow examples, prefer `~/...` style for home-relative paths instead of machine-specific `/Users/...` paths.
 
 ## AI Review Panel
 - Copilot is best for repository-native automated review and quick static feedback.

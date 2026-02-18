@@ -11,6 +11,7 @@ It keeps business understanding, schema decisions, and implementation boundaries
 - Structure by feature ownership, not by technical layer.
 - Keep schema details attached to the feature they support.
 - Prefer clear operational language over abstract prose.
+- Include references only when they add clear value; omit them when they do not.
 
 ## Required Structure
 
@@ -22,7 +23,7 @@ Use this sequence unless a project has an explicit exception:
 4. Core flow
 5. Feature sections (`## Feature: ...`)
 6. Delivery phases (only when needed)
-7. References (always last)
+7. References (optional; if included, keep last)
 
 Rules:
 
@@ -30,7 +31,7 @@ Rules:
 - Do not wrap features under a generic `## Feature Requirements` section.
 - Do not create a dedicated standalone schema section.
 - Put each table definition under its owning feature.
-- Keep `## References` as the final section in the file.
+- If `## References` is included, keep it as the final section in the file.
 - In references and cross-doc mentions, use documentation file names (for example `m23_procurement.md`) rather than absolute local paths.
 
 ## Data Model Requirements
@@ -62,6 +63,27 @@ When documentation is updated after design discussion:
 - Avoid UI wording in domain-level sections.
 - Prefer concise wording, but keep enough detail for implementation and review.
 
+## User Guide Audience Baseline
+
+- User guides must be written entirely from a common end-user perspective.
+- Assume zero prior project context, zero maintainer context, and zero repository-internal knowledge.
+- Define prerequisites, required tools, inputs, outputs, and expected results explicitly.
+- Do not require local source checkout for installation or setup unless the document is explicitly contributor-focused.
+- For end-user guides, use generic local path placeholders in examples: `/local/path/of/repo`, `/local/path/of/tool`.
+- Use generic remote placeholders in examples: `<owner>/<repo>`.
+- Never use machine-specific local paths in user-facing docs (`/Users/...`, `/home/...`, `C:\Users\...`).
+- For contributor-focused workflow or maintainer documentation, use `~/...` home-relative paths as defined in `INTEGRATION_WORKFLOW.md`.
+- ==If a user guide can only be followed by the author, it is invalid and must be rewritten for a first-time user.==
+
+## Path Naming Log
+
+- Date: 2026-02-17
+- Change: standardised user-facing path placeholders
+- Previous local path naming observed: `/Users/<username>/...`, `~/Studio/...`, `~/path/of/...`
+- Previous remote naming observed: `<owner>/chronicle`
+- Current local path standard: `/local/path/of/repo`, `/local/path/of/tool`
+- Current remote path standard: `<owner>/<repo>`
+
 ## Workflow
 
 Before coding:
@@ -73,7 +95,7 @@ Before coding:
 After coding:
 
 1. Re-check documentation and schema sync.
-2. Ensure references remain the final section.
+2. If references are included, ensure they remain the final section.
 3. Update only the feature sections affected by the change.
 4. If design decisions changed during discussion, record them in the documentation as conversation insights.
 
@@ -83,6 +105,9 @@ After coding:
 - No detached global schema section.
 - Every key attribute has explanatory comments.
 - Constraints and indexes include intent, not just definitions.
-- References section is present and last.
+- If a references section is present, it is last.
 - Documentation references use filename style, not absolute local paths.
 - Key conversation insights are merged into related sections and highlighted with `==...==` where useful.
+- User guides assume no prior background and are executable by a first-time common user.
+- User-facing examples use generic local/remote placeholders, not personal machine paths.
+- When path naming conventions are corrected, previous naming and replacement standard are logged.
