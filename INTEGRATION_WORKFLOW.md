@@ -17,6 +17,11 @@
 - Docs and code may be committed together when they belong to the same domain or feature scope.
 - Push each commit to GitHub immediately after commit; avoid long-lived local-only commits.
 - Open PRs early and merge frequently once checks pass to prevent branch drift.
+- Integration and delivery are separate concerns: integrate frequently, release only when delivery criteria are met.
+- Do not create release-only branches or PRs solely for tagging or release publication.
+- Do not include version identifiers in branch names, PR titles, or PR descriptions.
+- Version identifiers include semantic-version-like or tag-like markers (for example: `v1`, `v1.2.3`, `1.2.3`, `1-2-3`).
+- Keep integration naming scoped to behaviour, intent, or boundary (for example: `codex/tool/review-gate-hardening`).
 - After each merge, switch to `main` and fast-forward from `github/main`.
 - Houseclean branches frequently: delete merged local or remote branches and keep stash near zero.
 - Never delete local main or master or remote main or master refs (`main`, `master`, `github/main`, `github/master`, `origin/main`, `origin/master`) under any circumstances.
@@ -47,6 +52,15 @@
 ## Governance Boundary
 - AI reviews are mandatory process input for quality and risk reduction.
 - Merge authority remains with GitHub rulesets/checks and explicit human judgement.
+
+## Release and Tagging Boundary
+- Release/tag delivery is downstream from integration and does not require a dedicated release PR.
+- A tag/release may be created only after related integration work is hygiened:
+	- related PRs are merged or explicitly closed,
+	- related local and remote branches are pruned,
+	- local `main` is aligned to `github/main`.
+- Integration may happen many times without any release.
+- Keep version identifiers in tags and release-note artefacts only, never in branch names or PR metadata.
 
 ## Delivery Integrity Protocol (Locked)
 - Use a plan-then-apply gate: restate scope and exact files to change, then wait for explicit `Proceed` before editing.
