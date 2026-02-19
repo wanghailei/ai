@@ -12,7 +12,8 @@
 - Ask for confirmation before editing more than 24 files in a single turn.
 - Never modify vendor libraries or minified files.
 - At the start of each thread, declare one scope and map it to one branch.
-- Use `/tmp` for temporary files and command artefacts; keep `~` and client repositories free of ad-hoc temporary directories.
+- Use `~/.cache` for temporary files and command artefacts by default (for example `~/.cache/<tool>` or `~/.cache/tmp`); use `/tmp` only as an explicit fallback when `~/.cache` is unavailable. Keep client repositories free of ad-hoc temporary directories.
+- Treat naming and public interfaces as high-impact decisions: always get explicit user confirmation before creating or changing names of apps, programs, CLI commands, packages, classes, modules, or public methods.
 
 ## Instruction Set
 - Apply `~/AI/CODING.md` for naming and coding style.
