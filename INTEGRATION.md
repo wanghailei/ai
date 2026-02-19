@@ -1,4 +1,4 @@
-# INTEGRATION_WORKFLOW.md
+# INTEGRATION.md
 
 ## Ownership
 - This file defines shared workflow policy across projects that load `~/AI/AGENTS.md`.

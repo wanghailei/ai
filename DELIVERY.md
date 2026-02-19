@@ -2,7 +2,7 @@
 
 ## Purpose
 - This file defines shared delivery, test, staging, and release-validation policy across projects.
-- Use this together with `INTEGRATION_WORKFLOW.md` for branch/PR flow and with `DOCUMENTATION.md` for writing quality.
+- Use this together with `INTEGRATION.md` for branch/PR flow and with `DOCUMENTATION.md` for writing quality.
 
 ## Test
 - Separate validation evidence by mode:

@@ -79,7 +79,7 @@ When documentation is updated after design discussion:
 - For end-user guides, use generic local path placeholders in examples: `/local/path/of/repo`, `/local/path/of/tool`.
 - Use generic remote placeholders in examples: `<owner>/<repo>`.
 - Never use machine-specific local paths in user-facing docs (`/home/...`, `C:\Users\...`, or equivalent absolute home paths).
-- For contributor-focused workflow or maintainer documentation, use `~/...` home-relative paths as defined in `INTEGRATION_WORKFLOW.md`.
+- For contributor-focused workflow or maintainer documentation, use `~/...` home-relative paths as defined in `INTEGRATION.md`.
 - ==If a user guide can only be followed by the author, it is invalid and must be rewritten for a first-time user.==
 
 ## Path Naming Log
