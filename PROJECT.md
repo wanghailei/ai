@@ -131,5 +131,5 @@ An issue is done when:
 
 ## References
 - `AGENTS.md`
-- `INTEGRATION_WORKFLOW.md`
+- `INTEGRATION.md`
 - `DOCUMENTATION.md`

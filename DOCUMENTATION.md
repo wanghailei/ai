@@ -11,7 +11,7 @@ It keeps business understanding, schema decisions, and implementation boundaries
 - Structure by feature ownership, not by technical layer.
 - Keep schema details attached to the feature they support.
 - Prefer clear operational language over abstract prose.
-- Include references only when they add clear value; omit them when they do not.
+- Include references only when they add clear value.
 
 ## Required Structure
 
@@ -63,6 +63,13 @@ When documentation is updated after design discussion:
 - Avoid UI wording in domain-level sections.
 - Prefer concise wording, but keep enough detail for implementation and review.
 
+## User Guide Experience
+
+- For user guides, present the simplest successful start path first (minimal commands, minimal flags).
+- Defer optional flags, edge cases, and advanced variants to a later subsection (for example `Advanced options`).
+- Keep first-run onboarding short and confidence-building: one clear action plus expected result.
+- Optimise for easy start first, then progressive exploration.
+
 ## User Guide Audience Baseline
 
 - User guides must be written entirely from a common end-user perspective.
@@ -71,18 +78,18 @@ When documentation is updated after design discussion:
 - Do not require local source checkout for installation or setup unless the document is explicitly contributor-focused.
 - For end-user guides, use generic local path placeholders in examples: `/local/path/of/repo`, `/local/path/of/tool`.
 - Use generic remote placeholders in examples: `<owner>/<repo>`.
-- Never use machine-specific local paths in user-facing docs (`/Users/...`, `/home/...`, `C:\Users\...`).
-- For contributor-focused workflow or maintainer documentation, use `~/...` home-relative paths as defined in `INTEGRATION_WORKFLOW.md`.
+- Never use machine-specific local paths in user-facing docs (`/home/...`, `C:\Users\...`, or equivalent absolute home paths).
+- For contributor-focused workflow or maintainer documentation, use `~/...` home-relative paths as defined in `INTEGRATION.md`.
 - ==If a user guide can only be followed by the author, it is invalid and must be rewritten for a first-time user.==
 
 ## Path Naming Log
 
 - Date: 2026-02-17
-- Change: standardised user-facing path placeholders
-- Previous local path naming observed: `/Users/<username>/...`, `~/Studio/...`, `~/path/of/...`
-- Previous remote naming observed: `<owner>/chronicle`
-- Current local path standard: `/local/path/of/repo`, `/local/path/of/tool`
-- Current remote path standard: `<owner>/<repo>`
+- Change: standardised user-facing path placeholders.
+- Previous local path naming observed: absolute home-path style with user-name segments, `~/Studio/...`, `~/path/of/...`.
+- Previous remote naming observed: `<owner>/chronicle`.
+- Current local path standard: `/local/path/of/repo`, `/local/path/of/tool`.
+- Current remote path standard: `<owner>/<repo>`.
 
 ## Workflow
 
@@ -109,5 +116,6 @@ After coding:
 - Documentation references use filename style, not absolute local paths.
 - Key conversation insights are merged into related sections and highlighted with `==...==` where useful.
 - User guides assume no prior background and are executable by a first-time common user.
+- User guides start with the minimal viable command flow, with advanced flags/options documented later.
 - User-facing examples use generic local/remote placeholders, not personal machine paths.
-- When path naming conventions are corrected, previous naming and replacement standard are logged.
+- When path naming conventions are corrected, previous naming and replacement standards are logged.
