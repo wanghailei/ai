@@ -86,7 +86,7 @@ When documentation is updated after design discussion:
 
 - Date: 2026-02-17
 - Change: standardised user-facing path placeholders.
-- Previous local path naming observed: absolute home-path style with user-name segments, `~/Studio/...`, `~/path/of/...`.
+- Previous local path naming observed: absolute home-path style with user-name segments, `~/Dev/...`, `~/path/of/...`.
 - Previous remote naming observed: `<owner>/chronicle`.
 - Current local path standard: `/local/path/of/repo`, `/local/path/of/tool`.
 - Current remote path standard: `<owner>/<repo>`.
