@@ -91,6 +91,25 @@ When documentation is updated after design discussion:
 - Current local path standard: `/local/path/of/repo`, `/local/path/of/tool`.
 - Current remote path standard: `<owner>/<repo>`.
 
+## README Structure (User Journey First)
+
+- Treat `README.md` as the entrypoint for a first-time user.
+- Structure `README.md` by user journey and expected confidence gain, not by internal architecture.
+- Use this baseline sequence unless the project has a justified exception:
+  1. What problem the tool solves and who it is for.
+  2. Fastest safe start (minimal command path).
+  3. First successful result and how the user verifies it.
+  4. Daily workflow summary (what to run next and when).
+  5. Troubleshooting essentials (only top blockers).
+  6. Links to deeper docs (`docs/...`) for advanced or contributor content.
+- Keep `README.md` short and action-oriented; move deep reference content to dedicated docs.
+- Keep overlap minimal:
+  - `README.md`: orientation, quick start, navigation.
+  - User guide: step-by-step usage and operational detail.
+  - Developer guide: internal setup, contributor workflow, release/internal tooling.
+- Do not place internal-only install flows or private workflow instructions in `README.md`.
+- Ensure commands in `README.md` are executable by common users without maintainer context.
+
 ## Workflow
 
 Before coding:
@@ -119,3 +138,5 @@ After coding:
 - User guides start with the minimal viable command flow, with advanced flags/options documented later.
 - User-facing examples use generic local/remote placeholders, not personal machine paths.
 - When path naming conventions are corrected, previous naming and replacement standards are logged.
+- `README.md` follows a user-journey-first structure and avoids duplicating deep content from guides.
+- `README.md` keeps public user onboarding separate from internal developer workflows.
