@@ -32,6 +32,7 @@ A learning event is triggered when any of the following occurs:
 2. Distil:
 - Write the lesson in trigger-condition plus required-action format.
 - Keep it specific enough to be testable in future work.
+- Record the distilled lesson in `LESSONS.md` using the standard entry template.
 
 3. Place:
 - Promote the lesson into the most relevant durable rule file:
@@ -50,8 +51,8 @@ A learning event is triggered when any of the following occurs:
 
 ## Learning gate (definition-of-done extension)
 - A task with a triggered learning event is not done until the lesson is either:
-  - promoted into a durable rule file, or
-  - logged as a pending promotion item with an explicit next action.
+  - promoted into a durable rule file with a matching `LESSONS.md` entry, or
+  - logged as a pending promotion item in `LESSONS.md` with an explicit next action.
 - Completion reporting must include a one-line learning disposition: `promoted`, `pending`, or `not-triggered`.
 
 ## Quality bar for lessons
@@ -65,6 +66,7 @@ A learning event is triggered when any of the following occurs:
 
 ## References
 - `AGENTS.md`
+- `LESSONS.md`
 - `WORKFLOW.md`
 - `INTEGRATION.md`
 - `CODING.md`
