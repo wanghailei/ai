@@ -1,31 +1,16 @@
 # LEARNING.md
 
-## Purpose
-This document enforces the self-improvement loop for repositories that load `~/AI/AGENTS.md`.
-
-Primary goal:
+## Intent
 - Convert corrections and escaped defects into durable, reusable rules that reduce repeat mistakes.
 
-## Scope and boundaries
-In scope:
-- Learning event detection
-- Lesson distillation
-- Rule promotion workflow
-- Completion gate for learning actions
-
-Out of scope:
-- Repository-specific coding conventions (covered by `CODING.md`)
-- Branch and PR governance (covered by `INTEGRATION.md`)
-- Release validation standards (covered by `DELIVERY.md`)
-
-## Learning trigger events
+## Trigger events
 A learning event is triggered when any of the following occurs:
 - A user correction changes approach, behaviour, or output expectations.
 - A defect escapes and is discovered after an earlier claim of completion.
 - A failed check reveals a preventable process gap.
 - A review finding exposes a repeated weakness in decision-making or implementation.
 
-## Mandatory learning workflow
+## Learning workflow
 1. Detect:
 - Confirm whether the current task triggered a learning event.
 
@@ -49,7 +34,7 @@ A learning event is triggered when any of the following occurs:
 5. Report:
 - State which rule file changed and why.
 
-## Learning gate (definition-of-done extension)
+## Done gate
 - A task with a triggered learning event is not done until the lesson is either:
   - promoted into a durable rule file with a matching `LESSONS.md` entry, or
   - logged as a pending promotion item in `LESSONS.md` with an explicit next action.
@@ -63,12 +48,3 @@ A learning event is triggered when any of the following occurs:
 
 ## Pending promotions
 - None.
-
-## References
-- `AGENTS.md`
-- `LESSONS.md`
-- `WORKFLOW.md`
-- `INTEGRATION.md`
-- `CODING.md`
-- `DELIVERY.md`
-- `DOCUMENTATION.md`

@@ -1,9 +1,6 @@
 # LESSONS.md
 
-## Purpose
-This file is the chronological learning journal for repositories that load `~/AI/AGENTS.md`.
-
-Primary goal:
+## Intent
 - Preserve lesson history so corrections are traceable and promotable into durable rules.
 
 ## Usage rules
