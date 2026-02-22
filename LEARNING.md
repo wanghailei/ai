@@ -26,7 +26,7 @@ A learning event is triggered when any of the following occurs:
   - `CODING.md` for implementation and structure rules.
   - `DOCUMENTATION.md` for documentation behaviour.
   - `DELIVERY.md` for test, staging, and release validation discipline.
-- If no existing file is a clean fit, add a pending promotion item to this file and propose a new topic file in `~/AI`.
+- If no existing file is a clean fit, mark the lesson as `pending` in `LESSONS.md` with an explicit next action and propose a new topic file in `~/AI`.
 
 4. Verify:
 - Confirm the new or updated rule is clear, enforceable, and non-duplicative.
@@ -36,7 +36,7 @@ A learning event is triggered when any of the following occurs:
 
 ## Done gate
 - A task with a triggered learning event is not done until the lesson is either:
-  - promoted into a durable rule file with a matching `LESSONS.md` entry, or
+  - promoted into a durable rule file, or
   - logged as a pending promotion item in `LESSONS.md` with an explicit next action.
 - Completion reporting must include a one-line learning disposition: `promoted`, `pending`, or `not-triggered`.
 
@@ -45,6 +45,3 @@ A learning event is triggered when any of the following occurs:
 - Reusable: applies to future tasks with similar conditions.
 - Actionable: framed as a concrete behaviour or guardrail.
 - Minimal: avoids broad, vague, or contradictory rules.
-
-## Pending promotions
-- None.

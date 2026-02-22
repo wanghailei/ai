@@ -13,7 +13,7 @@
 Copy this block for each new lesson:
 
 ```md
-## YYYY-MM-DD - <short title>
+### YYYY-MM-DD - <short title>
 - Trigger: <user correction / escaped defect / failed check / review finding>
 - Context: <scope and impacted area>
 - Lesson: <trigger-condition -> required-action>
@@ -24,4 +24,4 @@ Copy this block for each new lesson:
 ```
 
 ## Entries
-- None yet.
+<!-- Append new entries below; do not modify or remove existing entries. -->
