@@ -51,6 +51,9 @@
 - `accepted`: implemented in the current PR.
 - `rejected`: not adopted, with explicit rationale.
 - `deferred`: intentionally postponed, with follow-up plan.
+- For PR disposition comments submitted via CLI, never use escaped newline literals (`\n`) inside the body text; they are parsed as plain characters and can break automated URL matching.
+- For multi-line disposition comments, use `gh pr comment --body-file <file>` so actual newline characters are preserved.
+- After posting a disposition comment, run or re-check the review gate to confirm the referenced finding URL is recognised as acknowledged.
 
 ## Governance Boundary
 - AI reviews are mandatory process input for quality and risk reduction.
