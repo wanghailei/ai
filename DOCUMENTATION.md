@@ -25,6 +25,12 @@ Use this sequence unless a project has an explicit exception:
 6. Delivery phases (only when needed)
 7. References (optional; if included, keep last)
 
+Explicit exception for AI governance files in `~/AI`:
+
+- Do not force application feature/module sections for governance or policy documents (`AGENTS.md`, `WORKFLOW.md`, `LEARNING.md`, `LESSONS.md`, `INTEGRATION.md`, `DELIVERY.md`, `PROJECT.md`, `DOCUMENTATION.md`).
+- In these governance files, avoid boilerplate section stacks such as `Purpose`, `Scope and boundaries`, and `References` unless they add concrete value.
+- Prefer a lean policy format with only operationally useful headings.
+
 Rules:
 
 - Each feature must be a `##` heading.
@@ -119,3 +125,4 @@ After coding:
 - User guides start with the minimal viable command flow, with advanced flags/options documented later.
 - User-facing examples use generic local/remote placeholders, not personal machine paths.
 - When path naming conventions are corrected, previous naming and replacement standards are logged.
+- AI governance files in `~/AI` use lean policy structure and do not require application feature/module templates.
