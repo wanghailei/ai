@@ -25,3 +25,12 @@ Copy this block for each new lesson:
 
 ## Entries
 <!-- Append new entries below; do not modify or remove existing entries. -->
+
+### 2026-02-22 - Disposition comments must preserve real newlines
+- Trigger: failed check
+- Context: PR review acknowledgement workflow in Butler release PR handling
+- Lesson: when posting `Codex:` disposition comments through `gh`, never embed escaped `\n` sequences; use `--body-file` or a single-line body so URL extraction and acknowledgement matching work reliably.
+- Evidence: Butler governance `review gate` blocked with `unacknowledged_actionable` until disposition comment was reposted without literal `\n`.
+- Promotion target: `INTEGRATION.md`
+- Disposition: promoted
+- Follow-up: none
