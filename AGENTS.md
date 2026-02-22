@@ -18,6 +18,7 @@
 ## Instruction Set
 - Apply `~/AI/CODING.md` for naming and coding style.
 - Apply `~/AI/WORKFLOW.md` for execution orchestration, autonomous bug fixing, verification discipline, and core engineering principles.
+- Apply `~/AI/LEARNING.md` for self-improvement loop enforcement and lesson-to-rule promotion discipline.
 - Apply `~/AI/INTEGRATION.md` for branch, PR, review, and delivery workflow by default in every repository you work on, unless that repository defines stricter local rules.
 - Apply `~/AI/DELIVERY.md` for test, staging, and release-validation policy.
 - Apply `~/AI/PROJECT.md` for backlog, issue, and project management workflow (GitHub Issues + Projects).

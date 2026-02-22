@@ -36,6 +36,7 @@ Out of scope:
 - Record behavioural guardrails in the most relevant global file (`WORKFLOW.md`, `CODING.md`, `INTEGRATION.md`, `DOCUMENTATION.md`, or `AGENTS.md`).
 - Write rules as trigger-condition plus required action so they can be applied repeatedly.
 - Revisit recent corrections at task start when they are relevant to the current scope.
+- Enforce this loop through `LEARNING.md`, including capture, promotion, and completion-gate checks.
 
 ### 4. Verify before declaring done
 - Never claim completion without proof.
@@ -91,6 +92,7 @@ Out of scope:
 
 ## References
 - `AGENTS.md`
+- `LEARNING.md`
 - `CODING.md`
 - `INTEGRATION.md`
 - `DELIVERY.md`
