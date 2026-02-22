@@ -17,6 +17,8 @@
 - Docs and code may be committed together when they belong to the same domain or feature scope.
 - Push each commit to GitHub immediately after commit; avoid long-lived local-only commits.
 - Open PRs early and merge frequently once checks pass to prevent branch drift.
+- Do not use squash merge for scoped work; preserve meaningful commit boundaries.
+- Default to rebase merge for PR integration.
 - For `gh pr create` and `gh pr edit`, never pass long markdown bodies directly via shell-quoted `--body` arguments.
 - Always write PR title/body text to a temporary file first, then submit with `--body-file` to prevent shell expansion (for example backticks, `$()`, or backslashes).
 - Use a single-quoted heredoc delimiter when preparing PR body files (for example `cat <<'EOF'`) so body content remains literal.
