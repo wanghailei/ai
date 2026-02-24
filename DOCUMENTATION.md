@@ -120,14 +120,15 @@ After coding:
 - Internal docs exist in `/docs` with expected boundaries.
 - User-facing examples avoid machine-specific absolute paths.
 
-## Documentation Standard Log
+## Project Documentation Template (Memory)
 
-- Date: 2026-02-24
-- Change: introduced the two-surface documentation model.
-- Public surface contract: `README.md`, `MANUAL.md`, `API.md`, and `RELEASE.md` are the user-facing root documents.
-- Internal surface contract: `docs/define.md`, `docs/design.md`, and `docs/develop.md` are internal maker documents.
-- README contract update: enforced one-sentence brief plus `## Introduction` (problem, solution, why it works) and user-only navigation links.
-- Template policy: default README template source is `README_TEMPLATE.md`.
+Default project documentation template:
+
+- Public user surface at root: `README.md`, `MANUAL.md`, `API.md`, `RELEASE.md`.
+- Internal maker surface in `/docs`: `define.md`, `design.md`, `develop.md`.
+- `README.md` opening contract: title -> one-sentence brief -> `## Introduction` (problem, solution, why it works).
+- `README.md` user navigation contract: link only `MANUAL.md`, `API.md`, and `RELEASE.md` in the primary read-next section.
+- Canonical template source: `README_TEMPLATE.md`.
 
 ## AI Governance File Exception
 
