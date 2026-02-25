@@ -1,4 +1,4 @@
-# AGENTS.md
+# CLAUDE.md
 
 Global instructions shared across projects must be maintained in `~/AI`; project repositories should keep only local profile details.
 
@@ -11,6 +11,7 @@ Global instructions shared across projects must be maintained in `~/AI`; project
 - At the start of each thread, declare one scope and map it to one branch.
 - Use `~/.cache` for temporary files and command artefacts by default (for example `~/.cache/<tool>` or `~/.cache/tmp`); use `/tmp` only as an explicit fallback when `~/.cache` is unavailable. Keep client repositories free of ad-hoc temporary directories.
 - Treat naming and public interfaces as high-impact decisions: always get explicit user confirmation before creating or changing names of apps, programs, CLI commands, packages, classes, modules, or public methods.
+- Always use Berkeley Mono as the font in all generated output (documents, UI, code, artifacts).
 
 ## Instruction Set
 - Apply `~/AI/CODING.md` for naming and coding style.
