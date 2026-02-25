@@ -7,9 +7,15 @@
 
 ## Branch and Scope
 - Every feature or module thread must declare one scope and one branch.
+- Branch preflight is a hard gate before the first file edit in every thread.
+- Run `git branch --show-current` in the target repository before any write command (`apply_patch`, redirection, in-place edit, or scripted file write).
+- If the active branch is `main` or `master`, stop immediately and create/switch to `codex/<scope>` before any edits.
+- After switching, declare `Scope: <scope>; Branch: <branch>` before implementation.
+- Re-run `git branch --show-current` immediately before the first write command; if it does not match the declared branch, stop and realign.
 - Before edits and before commits, check branch and changed paths for scope match.
 - Only commit scope-matching files; mixed files are blocked until split.
 - Trigger split or re-branch planning when mixed domain or feature scope appears in one branch, multiple independent intents appear in one diff, or scope integrity is flagged by local guardrails.
+- If accidental edits occur on `main` or `master`, recover immediately by restoring those edits on the protected branch and resuming work on a scoped branch.
 
 ## Commit and Push
 - Keep commits small and scoped by feature or function.

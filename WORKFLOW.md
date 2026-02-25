@@ -23,6 +23,9 @@ Out of scope:
 ### 1. Plan first for non-trivial work
 - Use explicit planning for any task with three or more steps, architectural impact, or unclear requirements.
 - State scope, branch, intended files, risks, and verification approach before implementation.
+- Before any write operation, run `git branch --show-current` in the target repository as a mandatory preflight check.
+- If the branch is `main` or `master`, create/switch to `codex/<scope>` first; editing on protected branches is forbidden.
+- Immediately before the first write command, restate `Scope: <scope>; Branch: <branch>` and re-run the branch check.
 - If new evidence invalidates the plan, stop and re-plan instead of forcing the original path.
 - If a user repeats a constraint two or more times (for example "must use X pattern"), treat it as non-negotiable acceptance criteria and restate it before coding.
 
@@ -63,6 +66,8 @@ Out of scope:
 1. Define:
 - Confirm scope and branch mapping.
 - Confirm the exact files to touch.
+- Run and record branch preflight (`git branch --show-current`) before the first write command.
+- If preflight returns `main` or `master`, stop and switch to `codex/<scope>` before continuing.
 
 2. Implement:
 - Make scoped changes only.
