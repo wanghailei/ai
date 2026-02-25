@@ -26,6 +26,15 @@ Copy this block for each new lesson:
 ## Entries
 <!-- Append new entries below; do not modify or remove existing entries. -->
 
+### 2026-02-23 - Repeated UI constraint must be frozen as acceptance criteria
+- Trigger: user correction
+- Context: BOS AI settings page implementation (`show-to-edit` requirement)
+- Lesson: if a user repeats a UI pattern constraint multiple times, freeze it as non-negotiable acceptance criteria and encode that constraint in system/smoke coverage before declaring completion.
+- Evidence: AI settings was initially implemented with section-level edit forms despite repeated `show-to-edit` direction; user rejected implementation.
+- Promotion target: `WORKFLOW.md` and `INTERFACE.md`
+- Disposition: promoted
+- Follow-up: keep `test/system/ai_settings_ui_smoke_test.rb` aligned with this invariant.
+
 ### 2026-02-22 - Disposition comments must preserve real newlines
 - Trigger: failed check
 - Context: PR review acknowledgement workflow in Butler release PR handling
@@ -34,3 +43,12 @@ Copy this block for each new lesson:
 - Promotion target: `INTEGRATION.md`
 - Disposition: promoted
 - Follow-up: none
+
+### 2026-02-23 - BOS show-to-edit must use the canonical editable stack
+- Trigger: user correction
+- Context: AI settings UI in BOS deviated to custom `<details>` edit controls.
+- Lesson: when BOS asks for `show-to-edit`, implement with the existing editable stack (`products/_entity`, `shared/_editable`, `editable_controller`) instead of inventing alternative edit interactions.
+- Evidence: user rejected multiple iterations and provided the canonical reference explicitly.
+- Promotion target: `INTERFACE.md`
+- Disposition: promoted
+- Follow-up: keep UI smoke tests asserting editable button flow (`.editable-btn-edit` -> save icon).

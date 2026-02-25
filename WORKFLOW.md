@@ -24,6 +24,7 @@ Out of scope:
 - Use explicit planning for any task with three or more steps, architectural impact, or unclear requirements.
 - State scope, branch, intended files, risks, and verification approach before implementation.
 - If new evidence invalidates the plan, stop and re-plan instead of forcing the original path.
+- If a user repeats a constraint two or more times (for example "must use X pattern"), treat it as non-negotiable acceptance criteria and restate it before coding.
 
 ### 2. Keep execution focused
 - Maintain one scope per branch and avoid mixed-intent diffs.
@@ -41,6 +42,7 @@ Out of scope:
 ### 4. Verify before declaring done
 - Never claim completion without proof.
 - Validate behaviour with targeted checks (tests, lint, runtime checks, logs, or repro steps as applicable).
+- For UI-pattern requirements, include at least one system/smoke test that asserts the interaction pattern itself, not only controller/model behaviour.
 - Report what changed and how it was verified; if verification is blocked, state why and what risk remains.
 - For non-trivial behaviour changes, inspect diff impact against mainline expectations.
 
