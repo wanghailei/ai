@@ -40,6 +40,8 @@ Required files:
 - Keep internal maker documents in `/docs` using lower-case single-word names: `define.md`, `design.md`, `develop.md`.
 - Do not expose internal `/docs` documents in public README navigation.
 - Do not include `VERSION` in README by default unless a repository explicitly requires it for users.
+- For supplementary template or reference files under `~/AI`, use a companion folder named after the owning policy file basename.
+- Example convention: `DOCUMENTATION.md` owns assets in `DOCUMENTATION/`, such as `DOCUMENTATION/README_TEMPLATE.md`.
 
 ## README Contract (Mandatory)
 
@@ -77,46 +79,9 @@ Use this sequence unless a project has an explicit exception:
 
 Do not link internal maker documents from this section.
 
-## README Template (Inline)
+## README Template Source
 
-Use the following template directly when defining project README content:
-
-~~~md
-# <Project Name>
-
-<One sentence: what this project is and who it is for.>
-
-## Introduction
-<Concise introduction that explains:>
-- <the user problem>
-- <how this product solves it>
-- <why this solution works well>
-
-## Quickstart
-Prerequisites:
-- <minimum prerequisite 1>
-- <minimum prerequisite 2>
-
-```bash
-<minimum command path to first success>
-```
-
-Expected result:
-- <observable success signal>
-
-## Where to Read Next
-- User manual: `MANUAL.md`
-- API reference: `API.md`
-- Release notes: `RELEASE.md`
-
-## Core Capabilities
-- <capability 1>
-- <capability 2>
-- <capability 3>
-
-## Support
-- <issues/contact/runbook link>
-~~~
+Use `DOCUMENTATION/README_TEMPLATE.md` as the canonical README template source for downstream project repositories.
 
 ## User Guide Audience Baseline
 
@@ -167,7 +132,7 @@ Default project documentation template:
 - Internal maker surface in `/docs`: `define.md`, `design.md`, `develop.md`.
 - `README.md` opening contract: title -> one-sentence brief -> `## Introduction` (problem, solution, why it works).
 - `README.md` user navigation contract: link only `MANUAL.md`, `API.md`, and `RELEASE.md` in the primary read-next section.
-- Canonical template source: inline template under `## README Template (Inline)` in this file.
+- Canonical template source: `DOCUMENTATION/README_TEMPLATE.md`.
 
 ## AI Governance File Exception
 
