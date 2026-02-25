@@ -17,8 +17,6 @@ They are not a structural requirement for the `~/AI` global instruction reposito
 
 ## Documentation Surfaces
 
-The two-surface model below applies to downstream/common project repositories.
-
 ### Public user surface (repository root)
 
 Required files:
@@ -140,4 +138,3 @@ For AI governance and policy files in `~/AI` (`AGENTS.md`, `WORKFLOW.md`, `LEARN
 
 - Do not force application feature/module templates.
 - Prefer lean policy structure with operationally useful headings.
-- Do not apply the downstream project root-doc template as a required structure for the `~/AI` instruction repository.
