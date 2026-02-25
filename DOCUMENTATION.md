@@ -77,9 +77,46 @@ Use this sequence unless a project has an explicit exception:
 
 Do not link internal maker documents from this section.
 
-## README Template
+## README Template (Inline)
 
-Use `README_TEMPLATE.md` in this repository as the default template.
+Use the following template directly when defining project README content:
+
+~~~md
+# <Project Name>
+
+<One sentence: what this project is and who it is for.>
+
+## Introduction
+<Concise introduction that explains:>
+- <the user problem>
+- <how this product solves it>
+- <why this solution works well>
+
+## Quickstart
+Prerequisites:
+- <minimum prerequisite 1>
+- <minimum prerequisite 2>
+
+```bash
+<minimum command path to first success>
+```
+
+Expected result:
+- <observable success signal>
+
+## Where to Read Next
+- User manual: `MANUAL.md`
+- API reference: `API.md`
+- Release notes: `RELEASE.md`
+
+## Core Capabilities
+- <capability 1>
+- <capability 2>
+- <capability 3>
+
+## Support
+- <issues/contact/runbook link>
+~~~
 
 ## User Guide Audience Baseline
 
@@ -130,7 +167,7 @@ Default project documentation template:
 - Internal maker surface in `/docs`: `define.md`, `design.md`, `develop.md`.
 - `README.md` opening contract: title -> one-sentence brief -> `## Introduction` (problem, solution, why it works).
 - `README.md` user navigation contract: link only `MANUAL.md`, `API.md`, and `RELEASE.md` in the primary read-next section.
-- Canonical template source: `README_TEMPLATE.md`.
+- Canonical template source: inline template under `## README Template (Inline)` in this file.
 
 ## AI Governance File Exception
 
