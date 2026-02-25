@@ -21,19 +21,19 @@ This file is the interaction entrypoint.
 UI patterns:
 
 - [UI Pattern 01: Show to Edit](./INTERFACE/UI_PATTERN_SHOW_TO_EDIT.md)
-- [UI Pattern 02: Main Side More](./INTERFACE/ui_pattern_02_main_side_more.md)
-- [UI Pattern 03: Inline Editable](./INTERFACE/ui_pattern_03_inline_editable.md)
+- [UI Pattern 02: Main Side More](./INTERFACE/UI_PATTERN_MAIN_SIDE_MORE.md)
+- [UI Pattern 03: Inline Editable](./INTERFACE/UI_PATTERN_INLINE_EDITABLE.md)
 
 Design guideline:
 
-- [Design Guidelines](./INTERFACE/design_guidelines.md)
+- [Design Guidelines](./INTERFACE/DESIGN_GUIDELINES.md)
 
 ## Adoption Rule
 
 When defining or reviewing module UI architecture:
 
 1. Read this file.
-2. Apply `ui_pattern_02_main_side_more` first.
+2. Apply `UI_PATTERN_MAIN_SIDE_MORE` first.
 3. Apply `UI_PATTERN_SHOW_TO_EDIT` for aggregate surfaces.
-4. Apply `ui_pattern_03_inline_editable` for field-level editing.
-5. Validate against `design_guidelines.md` before merge.
+4. Apply `UI_PATTERN_INLINE_EDITABLE` for field-level editing.
+5. Validate against `DESIGN_GUIDELINES.md` before merge.
