@@ -18,7 +18,7 @@ Layout/IndentationStyle:
   EnforcedStyle: tabs # Enforce tab indentation in Ruby files.
 
 Layout/AccessModifierIndentation:
-  Enabled: false # Keep `private/protected/public` at column 1.
+  EnforcedStyle: outdent # Enforce outdented access modifiers per CODING.md.
 
 Layout/FirstHashElementIndentation:
   Enabled: false # Avoid noise conflicts with tab-based style.
