@@ -61,3 +61,12 @@ Copy this block for each new lesson:
 - Promotion target: `AGENTS.md` and `DOCUMENTATION.md`
 - Disposition: promoted
 - Follow-up: none
+
+### 2026-02-25 - Use companion folders for ~/AI supplementary files
+- Trigger: user correction
+- Context: supplementary template files were requested without a stable placement convention in `~/AI`.
+- Lesson: when a policy file in `~/AI` needs supplementary files, place them in a companion folder named after that policy file basename (for example `DOCUMENTATION/README_TEMPLATE.md` for `DOCUMENTATION.md`).
+- Evidence: user explicitly required additional files like `README_TEMPLATE.md` to live in a same-name folder (`DOCUMENTATION/`).
+- Promotion target: `AGENTS.md` and `DOCUMENTATION.md`
+- Disposition: promoted
+- Follow-up: keep future supplementary assets out of repository root unless explicitly approved.
