@@ -36,6 +36,7 @@
 - Keep domain readability ahead of abstraction.
 - Do not trade readability for encapsulation.
 - When complexity tooling (for example RuboCop `Metrics/CyclomaticComplexity`) flags a method, prefer splitting into focused helper methods instead of suppressing the rule or raising thresholds.
+- When adding bounded scans (for example pagination, retries, or batch windows), never silently truncate remaining work at the limit; emit an explicit limit-reached failure or partial-result state and test that branch.
 
 ## Ruby on Rails Style
 - Prefer `do...end` over `{}` for Ruby blocks.

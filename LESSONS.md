@@ -70,3 +70,21 @@ Copy this block for each new lesson:
 - Promotion target: `AGENTS.md` and `DOCUMENTATION.md`
 - Disposition: promoted
 - Follow-up: keep future supplementary assets out of repository root unless explicitly approved.
+
+### 2026-02-25 - Bounded scans must fail loud at safety limits
+- Trigger: review finding
+- Context: Carson refactor review identified pagination caps that silently truncated data in review sweep and merged-PR evidence lookups.
+- Lesson: when introducing bounded scans (pagination, retry loops, or batch windows), never silently truncate results; return an explicit limit error or partial-data status and cover that path with a targeted test.
+- Evidence: review findings on `~/Dev/carson-claude/lib/carson/runtime/review/data_access.rb:150` and `~/Dev/carson-claude/lib/carson/runtime/local.rb:498`.
+- Promotion target: `CODING.md` and `WORKFLOW.md`
+- Disposition: promoted
+- Follow-up: none
+
+### 2026-02-25 - Code reviews must capture strengths and transferable lessons
+- Trigger: user correction
+- Context: review output for Claude's refactor focused on defects and under-reported what should be retained.
+- Lesson: for non-trivial code reviews, report findings first, then include evidence-backed strengths and explicit "what to keep" lessons so teams preserve good changes alongside fixes.
+- Evidence: user feedback: "Your review report is too simple. Isn't there anything Claude did better that we can learn from it?"
+- Promotion target: `WORKFLOW.md`
+- Disposition: promoted
+- Follow-up: none

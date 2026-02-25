@@ -43,6 +43,7 @@ Out of scope:
 - Never claim completion without proof.
 - Validate behaviour with targeted checks (tests, lint, runtime checks, logs, or repro steps as applicable).
 - For UI-pattern requirements, include at least one system/smoke test that asserts the interaction pattern itself, not only controller/model behaviour.
+- When introducing safety bounds (for example pagination caps or retry ceilings), verify both normal completion and limit-reached paths so truncation cannot pass silently.
 - Report what changed and how it was verified; if verification is blocked, state why and what risk remains.
 - For non-trivial behaviour changes, inspect diff impact against mainline expectations.
 
@@ -73,6 +74,7 @@ Out of scope:
 
 4. Report:
 - Summarise changed files, key behaviour changes, and verification evidence.
+- For non-trivial review deliverables, report findings first, then strengths worth keeping with concrete evidence and a short transferable lesson.
 - Call out risks, assumptions, or follow-up work explicitly.
 
 5. Improve:
