@@ -52,3 +52,12 @@ Copy this block for each new lesson:
 - Promotion target: `INTERFACE.md`
 - Disposition: promoted
 - Follow-up: keep UI smoke tests asserting editable button flow (`.editable-btn-edit` -> save icon).
+
+### 2026-02-25 - New files in ~/AI require prior user permission
+- Trigger: user correction
+- Context: README template guidance was added via a new standalone file (`README_TEMPLATE.md`) in `~/AI` without prior approval.
+- Lesson: before creating any new file in `~/AI`, ask explicit user permission; if denied, embed required content in existing global instruction files instead.
+- Evidence: user explicitly required prior permission and requested removal of the standalone template file.
+- Promotion target: `AGENTS.md` and `DOCUMENTATION.md`
+- Disposition: promoted
+- Follow-up: none
