@@ -5,7 +5,7 @@
 This file is the interaction entrypoint.
 
 - It defines global interface principles.
-- It points to detailed interface pattern and design files under `./INTERFACE/`.
+- It points to detailed interface pattern and design files under `~/AI/INTERFACE/`.
 - It should stay short; details belong in the linked files.
 
 ## Global Principles
@@ -20,13 +20,23 @@ This file is the interaction entrypoint.
 
 UI patterns:
 
-- [UI Pattern 01: Show to Edit](./INTERFACE/UI_PATTERN_SHOW_TO_EDIT.md)
-- [UI Pattern 02: Main Side More](./INTERFACE/UI_PATTERN_MAIN_SIDE_MORE.md)
-- [UI Pattern 03: Inline Editable](./INTERFACE/UI_PATTERN_INLINE_EDITABLE.md)
+- [UI Pattern 01: Show to Edit](~/AI/INTERFACE/UI_PATTERN_SHOW_TO_EDIT.md)
+- [UI Pattern 02: Main Side More](~/AI/INTERFACE/UI_PATTERN_MAIN_SIDE_MORE.md)
+- [UI Pattern 03: Inline Editable](~/AI/INTERFACE/UI_PATTERN_INLINE_EDITABLE.md)
 
 Design guideline:
 
-- [Design Guidelines](./INTERFACE/DESIGN_GUIDELINES.md)
+- [Design Guidelines](~/AI/INTERFACE/DESIGN_GUIDELINES.md)
+
+## Carbon Design System
+
+Carbon is the design system baseline for component structure, spacing, and visual grammar:
+
+- Use Carbon components (buttons, forms, data tables, notifications) as the default implementation layer.
+- Layer the custom UI patterns (Main/Side/More, Show-to-Edit, Inline Editable) on top of Carbon primitives, not as replacements.
+- Follow Carbon spacing tokens and grid conventions for layout consistency.
+- When Carbon and a custom pattern conflict, the custom pattern takes precedence for interaction behaviour; Carbon takes precedence for visual styling.
+- Refer to the Carbon Design System documentation for component API and accessibility standards.
 
 ## Adoption Rule
 

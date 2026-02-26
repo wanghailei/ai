@@ -13,6 +13,11 @@
 - Common-user dogfooding requires the same install path a normal user uses (published package source and normal install command).
 - Local source-built install is simulation evidence only.
 
+Examples:
+- Common-user dogfooding: install from the published gem/npm source (`gem install butler`, `npm install -g tool`), run the documented quickstart, and record the observable outcome.
+- Local simulation: clone the repository, build from source (`bundle exec rake install`), run in the dedicated simulation repository, and label all evidence as simulation-only.
+- Invalid mix: claiming release readiness by running source-built binaries through the published install path documentation.
+
 ## Staging
 - Local pre-release simulation must run in a dedicated simulation repository.
 - For Butler, use `butler-test/simulation` as the default simulation repository.
@@ -23,3 +28,4 @@
 - Do not claim release readiness from simulation evidence alone.
 - Release readiness requires at least one successful common-user dogfooding using published package distribution.
 - If package publication is pending, release status must be reported as pre-release validation only.
+- Minimum test coverage before release claim: unit tests pass, integration/system tests pass (or explicit blockers documented), and at least one end-to-end validation in the target install mode.

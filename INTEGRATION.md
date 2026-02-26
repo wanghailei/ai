@@ -9,8 +9,8 @@
 - Every feature or module thread must declare one scope and one branch.
 - Branch preflight is a hard gate before the first file edit in every thread.
 - Run `git branch --show-current` in the target repository before any write command (`apply_patch`, redirection, in-place edit, or scripted file write).
-- If `git branch --show-current` returns empty output (detached HEAD), stop immediately and create/switch to `codex/<scope>` before any edits.
-- If the active branch is `main` or `master`, stop immediately and create/switch to `codex/<scope>` before any edits.
+- If `git branch --show-current` returns empty output (detached HEAD), stop immediately and create/switch to `<agent>/<scope>` before any edits (each AI agent uses its own name as the branch prefix, for example `claude/feature-name` or `codex/feature-name`).
+- If the active branch is `main` or `master`, stop immediately and create/switch to `<agent>/<scope>` before any edits.
 - After switching, declare `Scope: <scope>; Branch: <branch>` before implementation.
 - Re-run `git branch --show-current` immediately before the first write command; if it does not match the declared branch, stop and realign.
 - Before edits and before commits, check branch and changed paths for scope match.
@@ -33,7 +33,7 @@
 - Do not create release-only branches or PRs solely for tagging or release publication.
 - Do not include version identifiers in branch names, PR titles, or PR descriptions.
 - Version identifiers include semantic-version-like or tag-like markers (for example: `v1`, `v1.2.3`, `1.2.3`, `1-2-3`).
-- Keep integration naming scoped to behaviour, intent, or boundary (for example: `codex/tool/review-gate-hardening`).
+- Keep integration naming scoped to behaviour, intent, or boundary (for example: `claude/tool/review-gate-hardening`).
 - After each merge, switch to `main` and fast-forward from `github/main`.
 - Houseclean branches frequently: delete merged local or remote branches and keep stash near zero.
 - Never delete local main or master or remote main or master refs (`main`, `master`, `github/main`, `github/master`, `origin/main`, `origin/master`) under any circumstances.
@@ -41,7 +41,7 @@
 
 ## Review Workflow
 - Before merge recommendation, read the current local or CI review report artifacts required by the repository workflow.
-- By default for any active PR, read unresolved review threads (including Copilot, ChatGPT or Codex, Claude, and Gemini), summarise required refinements, implement agreed fixes, and reply on resolved threads with a `Codex:` prefix before merge recommendation.
+- By default for any active PR, read unresolved review threads (including Copilot, ChatGPT or Codex, Claude, and Gemini), summarise required refinements, implement agreed fixes, and reply on resolved threads with a prefix identifying the AI agent (for example `Claude:` or `Codex:`) before merge recommendation.
 - After required checks turn green, run unresolved-thread sweeps using a convergence rule: capture unresolved-thread count plus latest thread activity marker, then poll again and continue until two consecutive snapshots are identical.
 - Merge only when the converged snapshot reports zero unresolved review threads and no blocking findings remain.
 - Do not treat green checks or `mergeStateStatus: CLEAN` as sufficient if unresolved review threads remain.

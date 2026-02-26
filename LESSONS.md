@@ -8,6 +8,8 @@
 - Add one entry per learning event.
 - Keep entries concise, evidence-based, and linked to rule promotion status.
 - Use home-relative paths (`~/...`) when referencing files.
+- Prefer GitHub PR/commit links over local filesystem paths for evidence references.
+- Entries older than six months or superseded by updated rules may be moved to a `## Archived` section.
 
 ## Entry template
 Copy this block for each new lesson:
@@ -75,7 +77,7 @@ Copy this block for each new lesson:
 - Trigger: review finding
 - Context: Carson refactor review identified pagination caps that silently truncated data in review sweep and merged-PR evidence lookups.
 - Lesson: when introducing bounded scans (pagination, retry loops, or batch windows), never silently truncate results; return an explicit limit error or partial-data status and cover that path with a targeted test.
-- Evidence: review findings on `~/Dev/carson-claude/lib/carson/runtime/review/data_access.rb:150` and `~/Dev/carson-claude/lib/carson/runtime/local.rb:498`.
+- Evidence: review findings on Carson refactor PR — pagination caps in `data_access.rb` and `local.rb` silently truncated data.
 - Promotion target: `CODING.md` and `WORKFLOW.md`
 - Disposition: promoted
 - Follow-up: none

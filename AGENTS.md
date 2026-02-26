@@ -4,16 +4,11 @@ Global instructions shared across projects must be maintained in `~/AI`; project
 
 ## Working Principles and Agreements
 - Apply first-principles reasoning and challenge inherited practice unless it clearly earns its place.
-- Avoid aggressive coding approaches for enterprise systems; prioritise security and stability over speed or cleverness.
 - Use British English spelling and usage in all communication and generated text.
 - Ask for confirmation before editing more than 24 files in a single turn.
-- Never modify vendor libraries or minified files.
-- At the start of each thread, declare one scope and map it to one branch.
-- Use `~/.cache` for temporary files and command artefacts by default (for example `~/.cache/<tool>` or `~/.cache/tmp`); use `/tmp` only as an explicit fallback when `~/.cache` is unavailable. Keep client repositories free of ad-hoc temporary directories.
 - Treat naming and public interfaces as high-impact decisions: always get explicit user confirmation before creating or changing names of apps, programs, CLI commands, packages, classes, modules, or public methods.
-- Always use Berkeley Mono as the font in all generated output (documents, UI, code, artifacts).
 - For the `~/AI` global instruction repository, always ask explicit user permission before creating any new file.
-- For supplementary files in `~/AI`, place them under a companion folder named after the owning policy file basename (for example `DOCUMENTATION/README_TEMPLATE.md`) instead of creating standalone helper files at repository root.
+- For supplementary files in `~/AI`, place them under a companion folder named after the owning policy file basename (for example `INTERFACE/DESIGN_GUIDELINES.md`) instead of creating standalone helper files at repository root.
 
 ## Instruction Set
 - Apply `~/AI/CODING.md` for naming and coding style.
@@ -24,6 +19,22 @@ Global instructions shared across projects must be maintained in `~/AI`; project
 - Apply `~/AI/DELIVERY.md` for test, staging, and release-validation policy.
 - Apply `~/AI/PROJECT.md` for backlog, issue, and project management workflow (GitHub Issues + Projects).
 - Apply `~/AI/DOCUMENTATION.md` for documentation structure and quality.
+
+## File Map
+
+| File | Domain |
+|------|--------|
+| `CODING.md` | Naming, coding style, language-specific conventions (Ruby, JavaScript, CSS), file splitting |
+| `INTERFACE.md` | UI patterns (Main/Side/More, Show-to-Edit, Inline Editable), Carbon Design System, design guidelines |
+| `WORKFLOW.md` | Execution orchestration, verification, bug fixing, core engineering principles |
+| `LEARNING.md` | Self-improvement loop, lesson capture and promotion workflow |
+| `LESSONS.md` | Append-only lesson history log |
+| `INTEGRATION.md` | Branch, commit, PR, review, merge, and release-tagging workflow |
+| `DELIVERY.md` | Test modes, staging, release-validation policy |
+| `PROJECT.md` | Backlog, issues, GitHub Projects, labels, definitions of ready and done |
+| `DOCUMENTATION.md` | Documentation surfaces, README contract, audience guidelines |
+
+Language-specific rules in `CODING.md` and `INTERFACE.md` apply to Ruby on Rails projects by default. Other technology stacks should define local equivalents in their repository-level instructions.
 
 ## Precedence
 - Apply the instruction set in the listed order.
