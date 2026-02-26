@@ -1,6 +1,7 @@
 # WORKFLOW.md
 
 ## Purpose
+
 This document defines execution workflow standards for repositories that load `~/AI/AGENTS.md`.
 
 Primary goal:
@@ -23,8 +24,7 @@ Out of scope:
 ### 1. Plan first for non-trivial work
 - Use explicit planning for any task with three or more steps, architectural impact, or unclear requirements.
 - State scope, branch, intended files, risks, and verification approach before implementation.
-- Before any write operation, run and record the mandatory branch preflight check defined in `INTEGRATION.md`.
-- Immediately before the first write command, restate `Scope: <scope>; Branch: <branch>` and re-run that preflight check.
+- Before any write operation, execute the branch preflight gate defined in `INTEGRATION.md`.
 - If new evidence invalidates the plan, stop and re-plan instead of forcing the original path.
 - If a user repeats a constraint two or more times (for example "must use X pattern"), treat it as non-negotiable acceptance criteria and restate it before coding.
 
@@ -45,7 +45,7 @@ Out of scope:
 - Never claim completion without proof.
 - Validate behaviour with targeted checks (tests, lint, runtime checks, logs, or repro steps as applicable).
 - For UI-pattern requirements, include at least one system/smoke test that asserts the interaction pattern itself, not only controller/model behaviour.
-- When introducing safety bounds (for example pagination caps or retry ceilings), verify both normal completion and limit-reached paths so truncation cannot pass silently.
+- Verify bounded scan limits per `CODING.md` — confirm both normal completion and limit-reached paths are covered.
 - Report what changed and how it was verified; if verification is blocked, state why and what risk remains.
 - For non-trivial behaviour changes, inspect diff impact against mainline expectations.
 

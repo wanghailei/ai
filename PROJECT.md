@@ -20,7 +20,7 @@ Out of scope:
 ## Core principles
 - Issues are the source of truth for work.
 - Projects are the operational view for planning and flow.
-- ==Versioning describes release outcome, not feature naming.==
+- **Versioning describes release outcome, not feature naming.**
 - One issue should represent one coherent outcome.
 - Keep taxonomy light; avoid label sprawl.
 

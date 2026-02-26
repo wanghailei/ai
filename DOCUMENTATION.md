@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This file defines default documentation standards for Codex work across projects.
+This file defines default documentation standards for AI-agent-assisted work across projects.
 It establishes a user-facing documentation surface and a separate internal maker surface.
 These standards are defaults for downstream project or product repositories that consume `~/AI` instructions.
 They are not a structural requirement for the `~/AI` global instruction repository itself.
@@ -40,24 +40,23 @@ Required files:
 - Keep internal maker documents in `/docs` using lower-case single-word names: `define.md`, `design.md`, `develop.md`.
 - Do not expose internal `/docs` documents in public README navigation.
 - Do not include `VERSION` in README by default unless a repository explicitly requires it for users.
-- For supplementary template or reference files under `~/AI`, use a companion folder named after the owning policy file basename.
-- Example convention: `DOCUMENTATION.md` owns assets in `DOCUMENTATION/`, such as `DOCUMENTATION/README_TEMPLATE.md`.
+- For supplementary files under `~/AI`, use a companion folder named after the owning policy file basename (for example `INTERFACE/` for `INTERFACE.md`).
 
 ## README Contract (Mandatory)
 
 `README.md` must start with:
 
-1. A one-sentence brief directly under the title, stating what the product is and who it is for.
-2. An `## Introduction` section that concisely explains:
-- the user problem,
-- how the product solves it,
-- why this solution is effective.
+1. A one-sentence brief directly under the title, stating what the product does and why it matters.
+2. A `## The Problem` section that names the user pain the product addresses in concrete, recognisable terms.
+3. A `## What <Product> Does` section that explains the solution through concrete outcome blocks — each block names a capability, states what happens for the user, and shows the command or action that delivers it.
 
-Tone requirements for `Introduction`:
+Tone requirements:
 
+- Lead with user outcomes, not implementation details.
 - Use light credibility and concise promotional wording.
 - Keep claims factual and verifiable.
 - Avoid aggressive marketing language.
+- Name commands and actions so readers can picture themselves using the product.
 
 ## Required README Structure
 
@@ -65,11 +64,18 @@ Use this sequence unless a project has an explicit exception:
 
 1. Project title
 2. One-sentence brief
-3. `## Introduction`
-4. `## Quickstart`
-5. `## Where to Read Next`
-6. `## Core Capabilities`
-7. `## Support`
+3. `## The Problem`
+4. `## What <Product> Does`
+5. `## When to Use <Product>`
+6. `## Quickstart`
+7. `## Where to Read Next`
+8. `## Support`
+
+`## The Problem` presents the pain the product addresses. Keep it concrete and recognisable — the reader should see their own situation in it.
+
+`## What <Product> Does` explains the solution through bold outcome blocks. Each block has a bold heading stating the outcome, followed by one or two sentences naming the command and what it achieves. End with a clean boundary statement if the product has an explicit separation model.
+
+`## When to Use <Product>` lists concrete scenarios where the product fits. Each scenario names a team shape or situation and explains why the product is the right tool in that context.
 
 `## Where to Read Next` must link only:
 
@@ -78,10 +84,6 @@ Use this sequence unless a project has an explicit exception:
 - `RELEASE.md`
 
 Do not link internal maker documents from this section.
-
-## README Template Source
-
-Use `DOCUMENTATION/README_TEMPLATE.md` as the canonical README template source for downstream project repositories.
 
 ## User Guide Audience Baseline
 
@@ -116,7 +118,9 @@ After coding:
 ## Quality Checklist
 
 - `README.md` contains one-sentence brief under title.
-- `README.md` contains an `## Introduction` section with problem, solution, and why it works.
+- `README.md` contains `## The Problem` with concrete, recognisable user pain.
+- `README.md` contains `## What <Product> Does` with outcome-oriented capability blocks.
+- `README.md` contains `## When to Use <Product>` with concrete scenarios.
 - `README.md` quickstart is runnable and has an expected result.
 - `README.md` links `MANUAL.md`, `API.md`, and `RELEASE.md`.
 - `README.md` does not expose internal `/docs` links by default.
@@ -130,13 +134,12 @@ Default project documentation template:
 
 - Public user surface at root: `README.md`, `MANUAL.md`, `API.md`, `RELEASE.md`.
 - Internal maker surface in `/docs`: `define.md`, `design.md`, `develop.md`.
-- `README.md` opening contract: title -> one-sentence brief -> `## Introduction` (problem, solution, why it works).
+- `README.md` opening contract: title -> one-sentence brief -> `## The Problem` -> `## What <Product> Does` (outcome blocks) -> `## When to Use <Product>` (scenarios).
 - `README.md` user navigation contract: link only `MANUAL.md`, `API.md`, and `RELEASE.md` in the primary read-next section.
-- Canonical template source: `DOCUMENTATION/README_TEMPLATE.md`.
 
 ## AI Governance File Exception
 
-For AI governance and policy files in `~/AI` (`AGENTS.md`, `WORKFLOW.md`, `LEARNING.md`, `LESSONS.md`, `INTEGRATION.md`, `DELIVERY.md`, `PROJECT.md`, `DOCUMENTATION.md`, `INTERFACE.md`):
+For policy files in `~/AI/` (uppercase `.md` files at repository root):
 
 - Do not force application feature/module templates.
 - Prefer lean policy structure with operationally useful headings.
