@@ -5,6 +5,7 @@ This file contains CSS-specific coding rules. It supplements the universal rules
 ## General
 
 - Plain CSS only; no preprocessors (Sass, Less, PostCSS) or utility frameworks (Tailwind).
+- Reuse existing repository CSS as much as possible; keep new CSS structured, modular, and reusable rather than page-specific overrides.
 - Use tabs for indentation.
 - One file per concern; each file wraps its entire contents in a single named `@layer`.
 

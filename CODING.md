@@ -9,6 +9,9 @@
 - Avoid UI-flavoured naming in domain/application layers unless explicitly justified.
 
 ## Coding
+- Avoid aggressive coding approaches for enterprise systems; prioritise security and stability over speed or cleverness.
+- Never modify vendor libraries or minified files.
+- Use `~/.cache` for temporary files and command artefacts by default (for example `~/.cache/<tool>` or `~/.cache/tmp`); use `/tmp` only as an explicit fallback when `~/.cache` is unavailable. Keep client repositories free of ad-hoc temporary directories.
 - Preserve existing author comments.
 - Prefer plain-English code over unnecessary indirection.
 - Every code file must begin with a short overview comment that states the file purpose, operating context, and key constraints.
@@ -17,7 +20,6 @@
 - For new or generated production code, add concise comments for intent and non-obvious logic.
 - For AI-agent-generated production code, add meaningful comments at module, class, and method level (especially private methods and domain logic) that explain what and why.
 - For AI-agent-generated production code, also add concise explanatory comments on key non-obvious lines inside methods (for example guards, branch decisions, side-effect calls, and data transforms) so intent and reason stay explicit.
-- Reuse existing repository CSS as much as possible; keep new CSS structured, modular, and reusable rather than page-specific overrides.
 - Do not prefix comments with `Why:`; write direct high-quality comments that clearly explain intent and reason.
 - Well-known, proven, widely trusted, and safe third-party libraries are allowed for production use.
 - Ask for confirmation before adding a new dependency only when risk, maintenance burden, licensing, or security posture is unclear.
@@ -29,8 +31,6 @@
 - Keep spaces inside hash braces, block braces, block pipes, and array literals where applicable.
 - For method calls with arguments, use spacing like `a_method( p1, p2 )`.
 - For arrays, use `[ 1, 2, 3 ]` when non-empty and `[]` when empty.
-- For CSS intended to be reusable across modules or repositories, use neutral class names and never project-specific prefixes (for example `bos-`).
-- Use project-prefixed CSS names only for project-specific styles that are not designed for reuse.
 - Continuously distil reusable elements (for example UI primitives, utility classes, and service patterns) so code can be shared across projects with minimal adaptation.
 - Extract logic only when reused, non-trivial, or cross-aggregate.
 - Keep domain readability ahead of abstraction.

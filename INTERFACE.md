@@ -5,7 +5,7 @@
 This file is the interaction entrypoint.
 
 - It defines global interface principles.
-- It points to detailed interface pattern and design files under `~/AI/INTERFACE/`.
+- It points to detailed interface pattern and design files under `./INTERFACE/`.
 - It should stay short; details belong in the linked files.
 
 ## Global Principles
@@ -20,13 +20,13 @@ This file is the interaction entrypoint.
 
 UI patterns:
 
-- [UI Pattern 01: Show to Edit](~/AI/INTERFACE/UI_PATTERN_SHOW_TO_EDIT.md)
-- [UI Pattern 02: Main Side More](~/AI/INTERFACE/UI_PATTERN_MAIN_SIDE_MORE.md)
-- [UI Pattern 03: Inline Editable](~/AI/INTERFACE/UI_PATTERN_INLINE_EDITABLE.md)
+- [UI Pattern 01: Show to Edit](./INTERFACE/UI_PATTERN_SHOW_TO_EDIT.md)
+- [UI Pattern 02: Main Side More](./INTERFACE/UI_PATTERN_MAIN_SIDE_MORE.md)
+- [UI Pattern 03: Inline Editable](./INTERFACE/UI_PATTERN_INLINE_EDITABLE.md)
 
 Design guideline:
 
-- [Design Guidelines](~/AI/INTERFACE/DESIGN_GUIDELINES.md)
+- [Design Guidelines](./INTERFACE/DESIGN_GUIDELINES.md)
 
 ## Carbon Design System
 
