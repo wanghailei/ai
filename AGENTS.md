@@ -24,7 +24,7 @@ Global instructions shared across projects must be maintained in `~/AI`; project
 
 | File | Domain |
 |------|--------|
-| `CODING.md` | Naming, coding style, language-specific conventions (Ruby, JavaScript, CSS), file splitting |
+| `CODING.md` | Naming, coding style, language-specific conventions (Ruby, JavaScript, CSS) |
 | `INTERFACE.md` | UI patterns (Main/Side/More, Show-to-Edit, Inline Editable), Carbon Design System, design guidelines |
 | `WORKFLOW.md` | Execution orchestration, verification, bug fixing, core engineering principles |
 | `LEARNING.md` | Self-improvement loop, lesson capture and promotion workflow |
