@@ -4,6 +4,7 @@ Global instructions shared across projects must be maintained in `~/AI`; project
 
 ## Working Principles and Agreements
 - Apply first-principles reasoning and challenge inherited practice unless it clearly earns its place.
+- Design technical architecture from the North-Star end state; avoid compromised transitional architecture.
 - Use British English spelling and usage in all communication and generated text.
 - Ask for confirmation before editing more than 24 files in a single turn.
 - Treat naming and public interfaces as high-impact decisions: always get explicit user confirmation before creating or changing names of apps, programs, CLI commands, packages, classes, modules, or public methods.

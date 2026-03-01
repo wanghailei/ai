@@ -5,7 +5,11 @@
 - This is the default workflow, which can be overridden by repository-specific rules.
 - Repository docs should keep only repository-specific profile details and reference this file for shared workflow rules.
 
+## Git Remote Naming
+- Use `github` as the git remote name for GitHub repositories, never `origin`. Name remotes after the hosting service.
+
 ## Branch and Scope
+- At the start of each thread, declare one scope and map it to one branch.
 - Every feature or module thread must declare one scope and one branch.
 - Branch preflight is a hard gate before the first file edit in every thread.
 - Run `git branch --show-current` in the target repository before any write command (`apply_patch`, redirection, in-place edit, or scripted file write).
@@ -22,6 +26,8 @@
 - Keep commits small and scoped by feature or function.
 - Commit splits should mainly follow business logic and feature logic.
 - Docs and code may be committed together when they belong to the same domain or feature scope.
+- Never add `Co-Authored-By` trailers or any AI agent attribution to commit messages.
+- Never add "Generated with" badges or AI tool attribution to PR descriptions.
 - Push each commit to GitHub immediately after commit; avoid long-lived local-only commits.
 - Open PRs early and merge frequently once checks pass to prevent branch drift.
 - Do not use squash merge for scoped work; preserve meaningful commit boundaries.

@@ -1,4 +1,4 @@
-# Global Ruby style baseline for ~/AI consumers.
+# BOS RuboCop baseline.
 # YAML must use spaces; Ruby source files use tabs by project rule.
 
 AllCops:
